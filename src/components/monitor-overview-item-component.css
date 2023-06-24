@@ -1,0 +1,159 @@
+.monitor-overview-item-component-monitor-overview-item-component {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding-top: var(--dl-space-space-p20);
+  padding-left: var(--dl-space-space-p20);
+  padding-right: var(--dl-space-space-p20);
+  padding-bottom: var(--dl-space-space-p10);
+}
+.monitor-overview-item-component-container {
+  gap: var(--dl-space-space-g10);
+  flex: 1;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  padding-top: var(--dl-space-space-p5);
+  border-color: transparent;
+  padding-bottom: var(--dl-space-space-p5);
+}
+.monitor-overview-item-component-container1 {
+  flex: 0 0 auto;
+  color: var(--dl-color-gray-white);
+  width: 45px;
+  height: 45px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  border-color: var(--dl-color-gray-border);
+  border-width: 2px;
+  border-radius: var(--dl-radius-radius-r8);
+  justify-content: center;
+  background-color: var(--dl-color-primary-lila);
+}
+.monitor-overview-item-component-text {
+  position: absolute;
+  font-size: 10px;
+  font-weight: 300;
+}
+.monitor-overview-item-component-image {
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  object-fit: cover;
+}
+.monitor-overview-item-component-container2 {
+  gap: var(--dl-space-space-g1);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.monitor-overview-item-component-text01 {
+  font-style: normal;
+  font-weight: 700;
+}
+.monitor-overview-item-component-text02 {
+  opacity: 0.6;
+  font-size: 10px;
+}
+.monitor-overview-item-component-container3 {
+  flex: 0.5;
+  width: 100%;
+  height: auto;
+  display: flex;
+  opacity: 0.7;
+  align-items: center;
+  font-weight: 500;
+  padding-top: var(--dl-space-space-p5);
+  border-color: transparent;
+  padding-left: var(--dl-space-space-p10);
+  padding-bottom: var(--dl-space-space-p5);
+}
+.monitor-overview-item-component-container4 {
+  flex: 0.5;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  padding-top: var(--dl-space-space-p5);
+  border-color: transparent;
+  padding-left: var(--dl-space-space-p10);
+  padding-bottom: var(--dl-space-space-p5);
+}
+.monitor-overview-item-component-container5 {
+  display: flex;
+  align-items: center;
+  padding-top: var(--dl-space-space-p5);
+  border-color: var(--dl-color-gray-border);
+  border-width: 1px;
+  padding-left: var(--dl-space-space-p10);
+  border-radius: var(--dl-radius-radius-r8);
+  padding-right: var(--dl-space-space-p10);
+  padding-bottom: var(--dl-space-space-p5);
+}
+.monitor-overview-item-component-text04 {
+  opacity: 0.4;
+  font-size: 10px;
+}
+.monitor-overview-item-component-container6 {
+  color: var(--dl-color-primary-lila);
+  display: flex;
+  align-items: center;
+  padding-top: var(--dl-space-space-p5);
+  border-color: rgba(104, 64, 165, 0.4);
+  border-width: 1px;
+  padding-left: var(--dl-space-space-p10);
+  border-radius: var(--dl-radius-radius-r8);
+  padding-right: var(--dl-space-space-p10);
+  padding-bottom: var(--dl-space-space-p5);
+  background-color: rgba(104, 64, 165, 0.1);
+}
+.monitor-overview-item-component-text05 {
+  opacity: 0.8;
+  font-size: 10px;
+}
+.monitor-overview-item-component-container7 {
+  color: var(--dl-color-danger-300);
+  display: flex;
+  align-items: center;
+  padding-top: var(--dl-space-space-p5);
+  border-color: rgba(162, 32, 32, 0.4);
+  border-width: 1px;
+  padding-left: var(--dl-space-space-p10);
+  border-radius: var(--dl-radius-radius-r8);
+  padding-right: var(--dl-space-space-p10);
+  padding-bottom: var(--dl-space-space-p5);
+  background-color: rgba(162, 32, 32, 0.1);
+}
+.monitor-overview-item-component-text06 {
+  opacity: 0.8;
+  font-size: 10px;
+}
+.monitor-overview-item-component-container8 {
+  gap: var(--dl-space-space-g3);
+  width: 80px;
+  height: auto;
+  display: flex;
+  opacity: 0.7;
+  align-items: center;
+  padding-top: var(--dl-space-space-p5);
+  padding-left: var(--dl-space-space-p10);
+  padding-bottom: var(--dl-space-space-p5);
+}
+.monitor-overview-item-component-text08 {
+  font-style: normal;
+  font-weight: 700;
+}
+.monitor-overview-item-component-text09 {
+  font-style: normal;
+  font-weight: 700;
+}
+.monitor-overview-item-component-root-class-name {
+  background-color: rgba(246, 248, 252, 0.3);
+}
