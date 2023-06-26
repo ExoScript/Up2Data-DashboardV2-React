@@ -316,7 +316,7 @@ const ListComponent = (props) => {
             <ul className="list">
               <li className="list-item">
                 <ContactOverviewItem
-                  rootClassName="contact-overview-item-root-class-name19"
+                  rootClassName="contact-overview-item-root-class-name32"
                   className=""
                 ></ContactOverviewItem>
               </li>
@@ -328,7 +328,7 @@ const ListComponent = (props) => {
             <ul className="list">
               <li className="list-item">
                 <ContactOverviewItem
-                  rootClassName="contact-overview-item-root-class-name20"
+                  rootClassName="contact-overview-item-root-class-name33"
                   className=""
                 ></ContactOverviewItem>
               </li>
