@@ -14,7 +14,7 @@ const Sandbox = (props) => {
         <meta property="og:title" content="Sandbox - Up2Data-DashboardV2" />
       </Helmet>
       <div className="sandbox-container01">
-        <Link to="/home" className="sandbox-navlink">
+        <Link to="/dashboard" className="sandbox-navlink">
           <div className="sandbox-container02 border-r"></div>
         </Link>
         <div className="sandbox-container03">
