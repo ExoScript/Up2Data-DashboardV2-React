@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 
-import PropTypes from 'prop-types'
-
 import './login-component.css'
 
 const LoginComponent = (props) => {
@@ -134,16 +132,6 @@ const LoginComponent = (props) => {
       </div>
     </div>
   )
-}
-
-LoginComponent.defaultProps = {
-  image_alt: 'image',
-  image_src: 'd216e8fe-2578-40ea-bfed-2c327f2a98f5',
-}
-
-LoginComponent.propTypes = {
-  image_alt: PropTypes.string,
-  image_src: PropTypes.string,
 }
 
 export default LoginComponent
