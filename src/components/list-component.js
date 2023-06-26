@@ -6,25 +6,7 @@ import ContactOverviewItem from './contact-overview-item'
 import './list-component.css'
 
 const ListComponent = (props) => {
-  const [menu, setMenu] = useState(0);
-
-  const items = JSON.parse(localStorage.getItem("userContacts"))
-  const itemsArray = Object.keys(items).map(key => {
-    return (<li key={items[key].company_name} className="list-item">
-      <ContactOverviewItem
-        rootClassName="contact-overview-item-root-class-name20"
-        className=""
-        company_name={items[key].company_name}
-        company_size={'-'}
-        section={'-'}
-        time={'-'}
-        status={1}
-        folder={'not assign'}
-      ></ContactOverviewItem>
-    </li>)
-  });
-
-
+  const [menu, setMenu] = useState(0)
   return (
     <div className={`list-component-list-overview ${props.rootClassName} `}>
       <div className="list-component-container border-b">
@@ -317,10 +299,35 @@ const ListComponent = (props) => {
         </div>
       </div>
       <div className="list-component-container10">
+        <div className="list-component-container11 border-b box-shadow-bottom">
+          <div className="list-component-container12 border-r">
+            <span className="">Name:</span>
+          </div>
+          <div className="list-component-container13 border-r">
+            <span className="">Section:</span>
+          </div>
+          <div className="list-component-container14 border-r">
+            <span className="">Folder:</span>
+          </div>
+          <div className="list-component-container15 border-r">
+            <span className="">Status:</span>
+          </div>
+          <div className="list-component-container16">
+            <span className="">Scan:</span>
+          </div>
+          <div className="list-component-container17 border-l">
+            <span className="">Actions</span>
+          </div>
+        </div>
         {menu === 0 && (
           <div className="list-component-menu0">
             <ul className="list">
-              {itemsArray}
+              <li className="list-item">
+                <ContactOverviewItem
+                  rootClassName="contact-overview-item-root-class-name13"
+                  className=""
+                ></ContactOverviewItem>
+              </li>
             </ul>
           </div>
         )}
@@ -329,7 +336,7 @@ const ListComponent = (props) => {
             <ul className="list">
               <li className="list-item">
                 <ContactOverviewItem
-                  rootClassName="contact-overview-item-root-class-name19"
+                  rootClassName="contact-overview-item-root-class-name32"
                   className=""
                 ></ContactOverviewItem>
               </li>
@@ -341,7 +348,7 @@ const ListComponent = (props) => {
             <ul className="list">
               <li className="list-item">
                 <ContactOverviewItem
-                  rootClassName="contact-overview-item-root-class-name20"
+                  rootClassName="contact-overview-item-root-class-name33"
                   className=""
                 ></ContactOverviewItem>
               </li>
