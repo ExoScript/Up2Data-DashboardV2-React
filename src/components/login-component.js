@@ -1,10 +1,56 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { Link, useHistory } from 'react-router-dom'
 
 import './login-component.css'
+import { authStatus } from '../database/app'
 
 const LoginComponent = (props) => {
-  const [remember_me, setRemember_me] = useState(false)
+  const history = useHistory();
+  const [remember_me, setRemember_me] = useState(false);
+  const [clientID, setClientID] = useState(
+    localStorage.getItem("clientID") || ""
+  );
+  const [secretKey, setSecretKey] = useState(
+    localStorage.getItem("secretKey") || ""
+  );
+
+  useEffect(() => {
+    localStorage.setItem("clientID", clientID);
+    localStorage.setItem("secretKey", secretKey);
+  }, [clientID, secretKey]);
+
+  const eventChange = (event) => {
+    const id = event.target.id
+    switch (id) {
+      case 'clientID':
+        setClientID(event.target.value);
+        break;
+      case 'secretKey':
+        setSecretKey(event.target.value);
+        break;
+      default:
+    }
+  };
+
+  const userAuth = async () => {
+    if (clientID && secretKey) {
+      const status = await authStatus();
+      if (status) {
+        console.log('Auth true');
+        history.push('/home');
+      } else {
+        console.log('Auth false');
+      }
+    } else {
+      if (!clientID) {
+        console.log('Client ID is missing');
+      }
+      if (!secretKey) {
+        console.log('Secret Key is missing');
+      }
+    }
+  };
+
   return (
     <div className="login-component-login-component box-shadow">
       <div className="login-component-container border-b">
@@ -32,24 +78,30 @@ const LoginComponent = (props) => {
       <div className="login-component-container02">
         <div className="login-component-container03">
           <span className="login-component-text10 visibility_60">
-            Email-Address
+            Client-ID:
           </span>
           <div className="login-component-container04">
             <input
+              onChange={eventChange}
+              id="clientID"
+              value={clientID}
               type="text"
-              placeholder="username@email.com"
+              placeholder="Enter your client ID"
               className="login-component-textinput input"
             />
           </div>
         </div>
         <div className="login-component-container05">
           <span className="login-component-text11 visibility_60">
-            Secret-Key
+            Secret-Key:
           </span>
           <div className="login-component-container06">
             <input
-              type="password"
-              value="0000000000"
+              onChange={eventChange}
+              id="secretKey"
+              value={secretKey}
+              type="text"
+              placeholder="Enter your Secret-Key"
               className="login-component-textinput1 input"
             />
           </div>
@@ -83,12 +135,10 @@ const LoginComponent = (props) => {
           <span>Secret-Key?</span>
         </span>
       </div>
-      <div className="login-component-container11 border-t">
-        <Link to="/home" className="login-component-navlink">
+      <div onClick={userAuth} className="login-component-container11 border-t">
           <div className="login-component-container12 box-shadow gradient">
             <span>Login</span>
           </div>
-        </Link>
       </div>
     </div>
   )
