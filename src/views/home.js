@@ -9,8 +9,8 @@ const Home = (props) => {
   return (
     <div className="home-container">
       <Helmet>
-        <title>Up2Data-DashboardV2</title>
-        <meta property="og:title" content="Up2Data-DashboardV2" />
+        <title>Home - Up2Data-DashboardV2</title>
+        <meta property="og:title" content="Home - Up2Data-DashboardV2" />
       </Helmet>
       <Main rootClassName="main-root-class-name"></Main>
     </div>

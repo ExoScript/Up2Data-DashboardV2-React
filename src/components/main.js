@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
 
 import PropTypes from 'prop-types'
 
 import DashboardComponent from './dashboard-component'
-import Contacts from './contacts'
+import ContactsComponent from './contacts-component'
 import CompanyProfileComponent from './company-profile-component'
+import ListComponent from './list-component'
 import './main.css'
 
 const Main = (props) => {
@@ -89,7 +89,7 @@ const Main = (props) => {
             </div>
             <div className="main-menu3">
               <div
-                onClick={() => setViewComponent(2)}
+                onClick={() => setViewComponent(10)}
                 className="main-menu-unselect2 menu-btn-unselect"
               >
                 <svg
@@ -119,9 +119,7 @@ const Main = (props) => {
               )}
             </div>
           </div>
-          <Link to="/login" className="main-navlink">
-            <div className="main-container04 border-t"></div>
-          </Link>
+          <div className="main-container04 border-t"></div>
         </div>
       </div>
       <div className="main-content">
@@ -179,12 +177,20 @@ const Main = (props) => {
               className=""
             ></DashboardComponent>
           )}
-          {viewComponent === 1 && <Contacts className=""></Contacts>}
+          {viewComponent === 1 && (
+            <ContactsComponent className=""></ContactsComponent>
+          )}
           {viewComponent === 2 && (
             <CompanyProfileComponent
               rootClassName="company-profile-component-root-class-name"
               className=""
             ></CompanyProfileComponent>
+          )}
+          {viewComponent === 10 && (
+            <ListComponent
+              rootClassName="list-component-root-class-name"
+              className=""
+            ></ListComponent>
           )}
         </div>
       </div>

@@ -6,7 +6,7 @@
   align-items: center;
   flex-direction: column;
 }
-.sandbox-container1 {
+.sandbox-container01 {
   flex: 0 0 auto;
   width: 100%;
   height: 100vh;
@@ -16,7 +16,7 @@
 .sandbox-navlink {
   display: contents;
 }
-.sandbox-container2 {
+.sandbox-container02 {
   flex: 0 0 auto;
   width: 250px;
   height: 100%;
@@ -25,7 +25,7 @@
   flex-direction: column;
   text-decoration: none;
 }
-.sandbox-container3 {
+.sandbox-container03 {
   flex: 1;
   height: 100%;
   display: flex;
@@ -43,7 +43,7 @@
   padding-right: var(--dl-space-space-p30);
   background-color: var(--dl-color-gray-white);
 }
-.sandbox-container4 {
+.sandbox-container04 {
   flex: 0 0 auto;
   width: 400px;
   height: 35px;
@@ -63,4 +63,89 @@
 .sandbox-textinput {
   border-width: 0px;
   background-color: transparent;
+}
+.sandbox-content-template {
+  flex: 1;
+  width: 100%;
+  display: none;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.sandbox-container05 {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  padding-left: var(--dl-space-space-p30);
+  padding-right: var(--dl-space-space-p30);
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.sandbox-container06 {
+  gap: var(--dl-space-space-g5);
+  display: flex;
+  align-items: flex-end;
+}
+.sandbox-text {
+  font-size: 21px;
+  font-weight: 500;
+}
+.sandbox-text01 {
+  color: var(--dl-color-primary-lila);
+  opacity: 0.4;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 300;
+}
+.sandbox-container07 {
+  gap: var(--dl-space-space-g20);
+  display: flex;
+  align-items: center;
+}
+.sandbox-container08 {
+  gap: var(--dl-space-space-g10);
+  fill: var(--dl-color-gray-white);
+  color: var(--dl-color-gray-white);
+  height: 32px;
+  display: flex;
+  font-size: 12px;
+  align-items: center;
+  padding-left: var(--dl-space-space-p20);
+  border-radius: var(--dl-radius-radius-r8);
+  padding-right: var(--dl-space-space-p20);
+  justify-content: center;
+}
+.sandbox-container09 {
+  flex: 1;
+  padding-left: var(--dl-space-space-p20);
+  padding-right: var(--dl-space-space-p20);
+}
+.sandbox-topbar-menu {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  padding-left: var(--dl-space-space-p20);
+  padding-right: var(--dl-space-space-p20);
+  background-color: var(--dl-color-gray-white);
+}
+.sandbox-menu-1 {
+  height: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.sandbox-menu-2 {
+  height: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.sandbox-menu-3 {
+  height: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
 }
