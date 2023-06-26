@@ -29,6 +29,7 @@ export async function authStatus(obj = { check: false }) {
                     localStorage.setItem("userEmail", client.email);
                     localStorage.setItem("userCompany", client.company);
                     localStorage.setItem("userWebsite", client.website);
+                    localStorage.setItem("userContacts", JSON.stringify(client.contacts));
                 }
                 resolve(true);
             } else {

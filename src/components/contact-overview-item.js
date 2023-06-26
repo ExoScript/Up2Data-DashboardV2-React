@@ -9,7 +9,7 @@ const ContactOverviewItem = (props) => {
   const [time_type, setTime_type] = useState('am')
   const [border, setBorder] = useState(true)
   const [profile_image, setProfile_image] = useState(false)
-  const [status, setStatus] = useState(0)
+  const [status, setStatus] = useState(props.status)
   return (
     <div
       className={`contact-overview-item-contact-overview ${props.rootClassName} `}
