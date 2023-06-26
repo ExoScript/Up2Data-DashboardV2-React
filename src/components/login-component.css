@@ -1,7 +1,6 @@
 .login-component-login-component {
   gap: var(--dl-space-space-g20);
   width: 369px;
-  height: 562px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -194,14 +193,15 @@
   font-style: normal;
   font-weight: 700;
 }
-.login-component-text13 {
+.login-component-navlink {
   cursor: pointer;
   font-size: 10px;
   font-style: normal;
   transition: 0.1s;
   font-weight: 300;
+  text-decoration: none;
 }
-.login-component-text13:hover {
+.login-component-navlink:hover {
   opacity: 1;
   font-style: normal;
   font-weight: 400;
@@ -268,32 +268,32 @@
   padding-right: var(--dl-space-space-p20);
   flex-direction: column;
   padding-bottom: var(--dl-space-space-p10);
-  background-color: var(--dl-color-background-bg1);
+  background-color: var(--dl-color-gray-white);
 }
-.login-component-text17 {
+.login-component-text16 {
   font-size: 10px;
   font-weight: 300;
   line-height: 1.5;
 }
-.login-component-text18 {
+.login-component-text17 {
   color: var(--dl-color-danger-300);
   font-weight: 700;
 }
-.login-component-text19 {
+.login-component-text18 {
   font-style: normal;
 }
-.login-component-text22 {
+.login-component-text21 {
+  font-style: normal;
+}
+.login-component-text24 {
   font-style: normal;
 }
 .login-component-text25 {
   font-style: normal;
 }
-.login-component-text26 {
+.login-component-text28 {
   font-style: normal;
 }
 .login-component-text29 {
-  font-style: normal;
-}
-.login-component-text30 {
   font-style: normal;
 }

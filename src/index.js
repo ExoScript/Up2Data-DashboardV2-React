@@ -7,6 +7,7 @@ import Login from './views/login'
 import Home from './views/home'
 import Sandbox from './views/sandbox'
 import Tamplates from './views/tamplates'
+import NewSecretKey from './views/new-secret-key'
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route component={Home} exact path="/home" />
         <Route component={Sandbox} exact path="/sandbox" />
         <Route component={Tamplates} exact path="/tamplates" />
+        <Route component={NewSecretKey} exact path="/new-secret-key" />
       </div>
     </Router>
   )

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 import { Player } from '@lottiefiles/react-lottie-player'
 
@@ -81,7 +82,10 @@ const LoginComponent = (props) => {
                 </div>
                 <span className="login-component-text12">Remember Me</span>
               </div>
-              <span className="login-component-text13 visibility_70">
+              <Link
+                to="/new-secret-key"
+                className="login-component-navlink visibility_70"
+              >
                 <span>
                   Forget
                   <span
@@ -91,7 +95,7 @@ const LoginComponent = (props) => {
                   />
                 </span>
                 <span>Secret-Key?</span>
-              </span>
+              </Link>
             </div>
           </div>
         </div>
@@ -115,65 +119,67 @@ const LoginComponent = (props) => {
           )}
         </div>
       </div>
-      <div className="login-component-container18 box-shadow">
-        <span className="login-component-text17 visibility_70">
-          <span className="login-component-text18">Login failed!</span>
-          <span className="login-component-text19">
-            <span>
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: ' ',
-                }}
-              />
+      {notification && (
+        <div className="login-component-container18 box-shadow">
+          <span className="login-component-text16 visibility_70">
+            <span className="login-component-text17">Login failed!</span>
+            <span className="login-component-text18">
+              <span>
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: ' ',
+                  }}
+                />
+              </span>
+              <span>
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: ' ',
+                  }}
+                />
+              </span>
             </span>
-            <span>
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: ' ',
-                }}
-              />
+            <span className="login-component-text21">
+              <span>
+                Please check your
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: ' ',
+                  }}
+                />
+              </span>
+              <span>
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: ' ',
+                  }}
+                />
+              </span>
             </span>
+            <span className="login-component-text24">Client-ID</span>
+            <span className="login-component-text25">
+              <span>
+                {' '}
+                and
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: ' ',
+                  }}
+                />
+              </span>
+              <span>
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: ' ',
+                  }}
+                />
+              </span>
+            </span>
+            <span className="login-component-text28">Secret-Key</span>
+            <span className="login-component-text29"> and try again.</span>
           </span>
-          <span className="login-component-text22">
-            <span>
-              Please check your
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: ' ',
-                }}
-              />
-            </span>
-            <span>
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: ' ',
-                }}
-              />
-            </span>
-          </span>
-          <span className="login-component-text25">Client-ID</span>
-          <span className="login-component-text26">
-            <span>
-              {' '}
-              and
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: ' ',
-                }}
-              />
-            </span>
-            <span>
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: ' ',
-                }}
-              />
-            </span>
-          </span>
-          <span className="login-component-text29">Secret-Key</span>
-          <span className="login-component-text30"> and try again.</span>
-        </span>
-      </div>
+        </div>
+      )}
     </div>
   )
 }
