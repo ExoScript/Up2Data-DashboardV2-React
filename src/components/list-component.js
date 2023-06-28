@@ -9,18 +9,53 @@ const ListComponent = (props) => {
   const [menu, setMenu] = useState(0)
   const items = JSON.parse(localStorage.getItem("userContacts"))
   const itemsArray = Object.keys(items).map(key => {
-    return (<li key={items[key].company_name} className="list-item">
+    if (items[key].monitor) {
+      if (items[key].monitor.status) {
+        return (<li key={items[key].company_name} className="list-item">
+          <ContactOverviewItem
+            rootClassName="contact-overview-item-root-class-name20"
+            className=""
+            company_name={items[key].company_name}
+            company_size={items[key].employees.length}
+            section={'not defined0'}
+            time={items[key].monitor.lest_scan.time}
+            status={0}
+            folder={'not assign'}
+            timeStatus={items[key].monitor.lest_scan.timeStatus}
+            // profile_image={items[key].monitor.lest_scan.timeStatus}
+          ></ContactOverviewItem>
+        </li>)
+      }
+      if (!items[key].monitor.status) {
+        return (<li key={items[key].company_name} className="list-item">
+          <ContactOverviewItem
+            rootClassName="contact-overview-item-root-class-name20"
+            className=""
+            company_name={items[key].company_name}
+            company_size={'-'}
+            section={'not defined2'}
+            time={items[key].monitor.lest_scan.time}
+            status={2}
+            folder={'not assign'}
+            timeStatus={items[key].monitor.lest_scan.timeStatus}
+          ></ContactOverviewItem>
+        </li>)
+      }
+    }else{
+      return (<li key={items[key].company_name} className="list-item">
       <ContactOverviewItem
         rootClassName="contact-overview-item-root-class-name20"
         className=""
         company_name={items[key].company_name}
         company_size={'-'}
-        section={'not defined'}
+        section={'not defined1'}
         time={'-'}
         status={1}
         folder={'not assign'}
+        timeStatus={'-'}
       ></ContactOverviewItem>
     </li>)
+    }
   });
   return (
     <div className={`list-component-list-overview ${props.rootClassName} `}>
@@ -337,7 +372,7 @@ const ListComponent = (props) => {
         {menu === 0 && (
           <div className="list-component-menu0">
             <ul className="list">
-            {itemsArray}
+              {itemsArray}
             </ul>
           </div>
         )}

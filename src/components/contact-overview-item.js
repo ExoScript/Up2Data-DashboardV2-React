@@ -6,9 +6,9 @@ import './contact-overview-item.css'
 
 const ContactOverviewItem = (props) => {
   const [profile_type, setProfile_type] = useState(0)
-  const [time_type, setTime_type] = useState('am')
+  const [time_type, setTime_type] = useState(props.timeStatus)
   const [border, setBorder] = useState(true)
-  const [profile_image, setProfile_image] = useState(false)
+  const [profile_image, setProfile_image] = useState(props.profile_image)
   const [status, setStatus] = useState(props.status)
   return (
     <div
@@ -20,7 +20,7 @@ const ContactOverviewItem = (props) => {
             {profile_image && (
               <img
                 alt="image"
-                src={props.image_src}
+                src={props.profile_image}
                 className="contact-overview-item-image"
               />
             )}
@@ -123,10 +123,10 @@ const ContactOverviewItem = (props) => {
           {status === 0 && (
             <div className="contact-overview-item-container15">
               <span className="contact-overview-item-text10">{props.time}</span>
-              {time_type === 'am' && (
+              {time_type === 'AM' && (
                 <span className="contact-overview-item-text11">AM</span>
               )}
-              {time_type === 'pm' && (
+              {time_type === 'PM' && (
                 <span className="contact-overview-item-text12">PM</span>
               )}
             </div>
@@ -161,9 +161,7 @@ const ContactOverviewItem = (props) => {
 ContactOverviewItem.defaultProps = {
   section: 'Customer Office Management',
   rootClassName: '',
-  image_src:
-    'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDJ8fHVzZXJ8ZW58MHx8fHwxNjg3NDg2NzM2fDA&ixlib=rb-4.0.3&w=200',
-  folder: 'New Contacts',
+ folder: 'New Contacts',
   company_size: '55',
   time: '09:13',
   contact_name: 'Contact name',
@@ -173,7 +171,6 @@ ContactOverviewItem.defaultProps = {
 ContactOverviewItem.propTypes = {
   section: PropTypes.string,
   rootClassName: PropTypes.string,
-  image_src: PropTypes.string,
   folder: PropTypes.string,
   company_size: PropTypes.string,
   time: PropTypes.string,
