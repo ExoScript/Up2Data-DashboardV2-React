@@ -9,7 +9,17 @@ const ListComponent = (props) => {
   const [menu, setMenu] = useState(0)
   const items = JSON.parse(localStorage.getItem("userContacts"))
   const itemsArray = Object.keys(items).map(key => {
+    let time;
+    let timeStatus;
     if (items[key].monitor) {
+      if(!items[key].monitor.lest_scan){
+        time = '-'
+        timeStatus = '-'
+      }else{
+        time = items[key].monitor.lest_scan.time
+        timeStatus = items[key].monitor.lest_scan.timeStatus
+
+      }
       if (items[key].monitor.status) {
         return (<li key={items[key].company_name} className="list-item">
           <ContactOverviewItem
@@ -18,10 +28,10 @@ const ListComponent = (props) => {
             company_name={items[key].company_name}
             company_size={items[key].size}
             section={'not defined0'}
-            time={items[key].monitor.lest_scan.time}
+            time={time}
             status={0}
             folder={'not assign'}
-            timeStatus={items[key].monitor.lest_scan.timeStatus}
+            timeStatus={timeStatus}
             imageSrc={items[key].imageSrc }
           ></ContactOverviewItem>
         </li>)
@@ -34,10 +44,10 @@ const ListComponent = (props) => {
             company_name={items[key].company_name}
             company_size={'-'}
             section={'not defined2'}
-            time={items[key].monitor.lest_scan.time}
+            time={time}
             status={2}
             folder={'not assign'}
-            timeStatus={items[key].monitor.lest_scan.timeStatus}
+            timeStatus={timeStatus}
           ></ContactOverviewItem>
         </li>)
       }
