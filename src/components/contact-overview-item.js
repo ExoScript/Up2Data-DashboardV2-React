@@ -8,7 +8,7 @@ const ContactOverviewItem = (props) => {
   const [profile_type, setProfile_type] = useState(0)
   const [time_type, setTime_type] = useState(props.timeStatus)
   const [border, setBorder] = useState(true)
-  const [profile_image, setProfile_image] = useState(props.profile_image)
+  const [profile_image, setProfile_image] = useState(props.imageSrc)
   const [status, setStatus] = useState(props.status)
   return (
     <div
@@ -20,7 +20,7 @@ const ContactOverviewItem = (props) => {
             {profile_image && (
               <img
                 alt="image"
-                src={props.profile_image}
+                src={profile_image}
                 className="contact-overview-item-image"
               />
             )}
@@ -159,10 +159,10 @@ const ContactOverviewItem = (props) => {
 }
 
 ContactOverviewItem.defaultProps = {
-  section: 'Customer Office Management',
+  section: '-',
   rootClassName: '',
- folder: 'New Contacts',
-  company_size: '55',
+  folder: '-',
+  company_size: '-',
   time: '09:13',
   contact_name: 'Contact name',
   company_name: 'Company name',
@@ -172,7 +172,6 @@ ContactOverviewItem.propTypes = {
   section: PropTypes.string,
   rootClassName: PropTypes.string,
   folder: PropTypes.string,
-  company_size: PropTypes.string,
   time: PropTypes.string,
   contact_name: PropTypes.string,
   company_name: PropTypes.string,

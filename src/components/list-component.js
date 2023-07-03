@@ -16,13 +16,13 @@ const ListComponent = (props) => {
             rootClassName="contact-overview-item-root-class-name20"
             className=""
             company_name={items[key].company_name}
-            company_size={items[key].employees.length}
+            company_size={items[key].size}
             section={'not defined0'}
             time={items[key].monitor.lest_scan.time}
             status={0}
             folder={'not assign'}
             timeStatus={items[key].monitor.lest_scan.timeStatus}
-            // profile_image={items[key].monitor.lest_scan.timeStatus}
+            imageSrc={items[key].imageSrc }
           ></ContactOverviewItem>
         </li>)
       }
